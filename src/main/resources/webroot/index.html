@@ -11,7 +11,7 @@
 <script src="//cdn.jsdelivr.net/sockjs/1.0.0/sockjs.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vertx/3.5.0/vertx-eventbus.min.js"></script>
 <script>
-  var eb = new EventBus('https://localhost:8443/eventbus');
+  var eb = new EventBus('/eventbus');
 
   eb.onopen = function () {
     eb.registerHandler('feed', function (err, msg) {
